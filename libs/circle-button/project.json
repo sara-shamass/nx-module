@@ -1,0 +1,29 @@
+{
+  "name": "circle-button",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/circle-button/src",
+  "prefix": "lib",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "libs/circle-button/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/circle-button/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/circle-button/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

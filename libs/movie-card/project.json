@@ -1,0 +1,29 @@
+{
+  "name": "movie-card",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/movie-card/src",
+  "prefix": "lib",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "libs/movie-card/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/movie-card/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/movie-card/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

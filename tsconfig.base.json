@@ -10,11 +10,36 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2020", "dom"],
+    "lib": [
+      "es2020",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@nx-module/circle-button": [
+        "libs/circle-button/src/index.ts"
+      ],
+      "@nx-module/movie-card": [
+        "libs/movie-card/src/index.ts"
+      ],
+      "@nx-module/navigation": [
+        "libs/navigation/src/index.ts"
+      ],
+      "@nx-module/search-bar": [
+        "libs/search-bar/src/index.ts"
+      ],
+      "@nx-module/ui-components": [
+        "libs/ui-components/src/index.ts"
+      ],
+      "@nx-module/ui-components/*": [
+        "dist/libs/ui-components/*"
+      ]
+    }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }
